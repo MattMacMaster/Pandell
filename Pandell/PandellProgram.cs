@@ -19,6 +19,12 @@ namespace Pandell
 
             var listOutput = string.Join(", ", randomList);
             Console.WriteLine(listOutput);
+
+            //Tests to see if any duplicates exist by comparing the list count to the total unique entries which should be equal
+            if (randomList.Count != randomList.Distinct().Count())
+            {
+                Console.WriteLine("Found Duplicates");
+            };
         }
     }
 }
